@@ -16,19 +16,35 @@ jobs:
           architecture: x64
       - run: flutter pub get
       
-      # 移除默认的 CDN trunk 源，避免 500 错误
-      - name: Configure CocoaPods source
+      # 配置 CocoaPods 使用 GitHub 镜像源，避免 CDN 500 错误
+      - name: Setup CocoaPods GitHub source
         run: |
-          pod repo remove trunk || true
-          pod repo add trunk https://github.com/CocoaPods/Specs.git || true
-          pod repo update trunk
-          # 确保 Podfile 中有正确的 source 配置
-          if ! grep -q "source 'https://github.com/CocoaPods/Specs.git'" Podfile; then
-            sed -i '' "1i\\
-source 'https://github.com/CocoaPods/Specs.git'\\
-" Podfile
+          echo "移除默认 CDN trunk 源..."
+          pod repo remove trunk 2>/dev/null || echo "trunk 不存在，跳过"
+          
+          echo "克隆 GitHub Specs 仓库..."
+          if [ ! -d ~/.cocoapods/repos/trunk ]; then
+            git clone --depth 1 https://github.com/CocoaPods/Specs.git ~/.cocoapods/repos/trunk
+          else
+            echo "trunk 仓库已存在"
           fi
-        working-directory: ios
+          
+          echo "验证 CocoaPods 源配置..."
+          ls -la ~/.cocoapods/repos/ || true
+          
+      # 修改 Podfile，强制指定 source
+      - name: Patch Podfile
+        run: |
+          cd ios
+          # 在 Podfile 顶部添加 source 声明
+          if ! grep -q "source 'https://github.com/CocoaPods/Specs.git'" Podfile; then
+            echo "source 'https://github.com/CocoaPods/Specs.git'" | cat - Podfile > Podfile.tmp
+            mv Podfile.tmp Podfile
+          fi
+          # 取消注释 platform 行
+          sed -i '' 's/# platform :ios/platform :ios/' Podfile || sed -i 's/# platform :ios/platform :ios/' Podfile
+          echo "=== Modified Podfile ==="
+          head -10 Podfile
 
       - run: flutter build ios --release --no-codesign
 
