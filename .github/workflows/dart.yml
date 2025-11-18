@@ -16,8 +16,18 @@ jobs:
           architecture: x64
       - run: flutter pub get
       
-
-      - run: pod repo update
+      # 移除默认的 CDN trunk 源，避免 500 错误
+      - name: Configure CocoaPods source
+        run: |
+          pod repo remove trunk || true
+          pod repo add trunk https://github.com/CocoaPods/Specs.git || true
+          pod repo update trunk
+          # 确保 Podfile 中有正确的 source 配置
+          if ! grep -q "source 'https://github.com/CocoaPods/Specs.git'" Podfile; then
+            sed -i '' "1i\\
+source 'https://github.com/CocoaPods/Specs.git'\\
+" Podfile
+          fi
         working-directory: ios
 
       - run: flutter build ios --release --no-codesign
