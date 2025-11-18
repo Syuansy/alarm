@@ -1,0 +1,2 @@
+D:/Program_Files/AAA/graduationDesign/code/alarm_app/alarm_front/android/app/.cxx/RelWithDebInfo/4t4u251e/x86_64/CMakeFiles/edit_cache.dir
+D:/Program_Files/AAA/graduationDesign/code/alarm_app/alarm_front/android/app/.cxx/RelWithDebInfo/4t4u251e/x86_64/CMakeFiles/rebuild_cache.dir

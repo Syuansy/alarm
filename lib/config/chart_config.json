@@ -1,0 +1,473 @@
+{
+  "menuItems": [
+    "Home",
+    "RunInfo",
+    "SPMT",
+    "Data Flow",
+    "ROS",
+    "DDR",
+    "Trigger",
+    "LLM",
+    "Monitor",
+    "alarm"
+  ],
+  "default":"daq",
+  
+  "daq": [
+    {
+      "menuBar": "Home",
+      "timePicker": "1",
+      "timeRange": "10m",
+      "content": [
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=daq&refresh=5s&panelId=100&__feature.dashboardSceneSolo=true&kiosk&theme=light"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=daq&refresh=5s&panelId=29&__feature.dashboardSceneSolo=true&kiosk&theme=light"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=daq&refresh=5s&panelId=120&__feature.dashboardSceneSolo=true&kiosk&theme=light"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=daq&refresh=5s&panelId=24&__feature.dashboardSceneSolo=true&kiosk&theme=light"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=daq&refresh=5s&panelId=115&__feature.dashboardSceneSolo=true&kiosk&theme=light"
+        }
+      ]
+    },
+    {
+      "menuBar": "SPMT",
+      "timePicker": "1",
+      "timeRange": "10m",
+      "content": [
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.115:23456/?nobrowser&amp&item=Canvases/juno_daq_canvas_HG_MERGEspmt_tq_distribution0_0&amp&monitoring=60000"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.115:23456/?nobrowser&amp&item=Canvases/juno_daq_canvas_HG_MERGEcd_spmt_period_channel_num_in_one_global_event_accumulate0_0&amp&monitoring=60000"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.115:23456/?nobrowser&amp&item=Canvases/juno_daq_canvas_HG_MERGEcd_spmt_nhit_channel_num_in_one_global_event_accumulate0_0&amp&monitoring=60000"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.115:23456/?nobrowser&amp&item=Canvases/juno_daq_canvas_HG_MERGEcd_spmt_external_channel_num_in_one_global_event_accumulate0_0&amp&monitoring=60000"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.115:23456/?nobrowser&amp&item=Canvases/juno_daq_canvas_HG_MERGEcd_spmt_channel_num_in_one_global_event_accumulate0_0&amp&monitoring=60000"
+        }
+
+
+      ]
+    },
+    {
+      "menuBar": "Trigger",
+      "timePicker": "1",
+      "timeRange": "10m",
+      "content": [
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=daq&refresh=5s&panelId=107&__feature.dashboardSceneSolo=true&kiosk&theme=light"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=daq&refresh=5s&panelId=107&__feature.dashboardSceneSolo=true&kiosk&theme=light"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=daq&refresh=5s&panelId=6&__feature.dashboardSceneSolo=true&kiosk&theme=light"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=daq&refresh=5s&panelId=128&__feature.dashboardSceneSolo=true&kiosk&theme=light"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.115:23456/?nobrowser&amp&item=Canvases/juno_daq_canvas_HG_MERGEcd_trigger_interval0_0&amp&monitoring=30000"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.115:23456/?nobrowser&amp&item=Canvases/juno_daq_canvas_HG_MERGEwp_trigger_interval0_0&amp&monitoring=30000"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.115:23456/?nobrowser&amp&item=Canvases/juno_daq_canvas_HG_MERGEcd_trigger_type0_0&amp&monitoring=30000"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.115:23456/?nobrowser&amp&item=Canvases/juno_daq_canvas_HG_MERGEwp_trigger_type0_0&amp&monitoring=30000"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.115:23456/?nobrowser&amp&item=Canvases/juno_daq_canvas_HG_MERGEtrigger_count_in_one_cd_event0_0&amp&monitoring=30000"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.115:23456/?nobrowser&amp&item=Canvases/juno_daq_canvas_HG_MERGEtrigger_count_in_one_wp_event0_0&amp&monitoring=30000"
+        }
+      ]
+    },
+    {
+      "menuBar": "ROS",
+      "timePicker": "1",
+      "timeRange": "10m",
+      "content": [
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=daq&refresh=5s&panelId=108&__feature.dashboardSceneSolo=true&kiosk&theme=light"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=daq&refresh=5s&panelId=107&__feature.dashboardSceneSolo=true&kiosk&theme=light"
+        }
+      ]
+    },
+    {
+      "menuBar": "DDR",
+      "timePicker": "1",
+      "timeRange": "10m",
+      "varPicker": {
+        "BEC": "2151",
+        "GCU": "7485"
+      },
+      "content": [
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/8ewjce3f/ddr?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-BEC={BEC}&var-GCU={GCU}&refresh=5s&panelId=2&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/8ewjce3f/ddr?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-BEC={BEC}&var-GCU={GCU}&refresh=5s&panelId=3&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/8ewjce3f/ddr?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-BEC={BEC}&var-GCU={GCU}&refresh=5s&panelId=5&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/8ewjce3f/ddr?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-BEC={BEC}&var-GCU={GCU}&refresh=5s&panelId=4&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/8ewjce3f/ddr?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-BEC={BEC}&var-GCU={GCU}&refresh=5s&panelId=7&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/8ewjce3f/ddr?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-BEC={BEC}&var-GCU={GCU}&refresh=5s&panelId=8&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/8ewjce3f/ddr?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-BEC={BEC}&var-GCU={GCU}&refresh=5s&panelId=6&kiosk&theme=light&__feature.dashboardSceneSolo"
+        }
+      ]
+    },
+    {
+      "menuBar": "Data Flow",
+      "timePicker": "1",
+      "timeRange": "10m",
+      "content": [
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=daq&refresh=5s&panelId=112&__feature.dashboardSceneSolo=true&kiosk&theme=light"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=daq&refresh=5s&panelId=111&__feature.dashboardSceneSolo=true&kiosk&theme=light"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=daq&refresh=5s&panelId=111&__feature.dashboardSceneSolo=true&kiosk&theme=light"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=daq&refresh=5s&panelId=93&__feature.dashboardSceneSolo=true&kiosk&theme=light"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=daq&refresh=5s&panelId=73&__feature.dashboardSceneSolo=true&kiosk&theme=light"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=daq&refresh=5s&panelId=68&__feature.dashboardSceneSolo=true&kiosk&theme=light"
+        }
+      ]
+    }
+  ],
+
+  "test": [
+    {
+      "menuBar": "Home",
+      "timePicker": "1",
+      "timeRange": "10m",
+      "content": [
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=test&refresh=5s&&panelId=100&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=test&refresh=5s&&panelId=29&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=test&refresh=5s&&panelId=120&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=test&refresh=5s&&panelId=107&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=test&refresh=5s&&panelId=73&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=test&refresh=5s&&panelId=112&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=test&refresh=5s&&panelId=111&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=test&refresh=5s&&panelId=4&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=test&refresh=5s&&panelId=6&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=test&refresh=5s&&panelId=24&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=test&refresh=5s&&panelId=38&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af3/other?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=test&refresh=30s&panelId=108&kiosk&theme=light&__feature.dashboardSceneSolo"
+        }
+      ]
+    },
+    {
+      "menuBar": "Page1",
+      "timePicker": "1",
+      "timeRange": "10m",
+      "content": [
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=test&refresh=5s&&panelId=93&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=test&refresh=5s&&panelId=115&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=test&refresh=5s&&panelId=110&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=test&refresh=5s&&panelId=68&kiosk&theme=light&__feature.dashboardSceneSolo"
+        }
+      ]
+    }
+  ],
+
+  "spmt": [
+    {
+      "menuBar": "Home",
+      "timePicker": "1",
+      "timeRange": "10m",
+      "content": [
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=spmt&refresh=5s&&panelId=100&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=spmt&refresh=5s&&panelId=29&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=spmt&refresh=5s&&panelId=120&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=spmt&refresh=5s&&panelId=107&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=spmt&refresh=5s&&panelId=73&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=spmt&refresh=5s&&panelId=112&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=spmt&refresh=5s&&panelId=111&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=spmt&refresh=5s&&panelId=4&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=spmt&refresh=5s&&panelId=6&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=spmt&refresh=5s&&panelId=24&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=spmt&refresh=5s&&panelId=38&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af3/other?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=spmt&refresh=30s&panelId=108&kiosk&theme=light&__feature.dashboardSceneSolo"
+        }
+      ]
+    },
+    {
+      "menuBar": "Page1",
+      "timePicker": "1",
+      "timeRange": "10m",
+      "content": [
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=spmt&refresh=5s&&panelId=93&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=spmt&refresh=5s&&panelId=115&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=spmt&refresh=5s&&panelId=110&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=spmt&refresh=5s&&panelId=68&kiosk&theme=light&__feature.dashboardSceneSolo"
+        }
+      ]
+    }
+  ],  
+  
+  "wp-wal": [
+    {
+      "menuBar": "Home",
+      "timePicker": "1",
+      "timeRange": "10m",
+      "content": [
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=wp-wal&refresh=5s&&panelId=100&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=wp-wal&refresh=5s&&panelId=29&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=wp-wal&refresh=5s&&panelId=120&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=wp-wal&refresh=5s&&panelId=107&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=wp-wal&refresh=5s&&panelId=73&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=wp-wal&refresh=5s&&panelId=112&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=wp-wal&refresh=5s&&panelId=111&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=wp-wal&refresh=5s&&panelId=4&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=wp-wal&refresh=5s&&panelId=6&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=wp-wal&refresh=5s&&panelId=24&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=wp-wal&refresh=5s&&panelId=38&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af3/other?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=wp-wal&refresh=30s&panelId=108&kiosk&theme=light&__feature.dashboardSceneSolo"
+        }
+      ]
+    },
+    {
+      "menuBar": "Page1",
+      "timePicker": "1",
+      "timeRange": "10m",
+      "content": [
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=wp-wal&refresh=5s&&panelId=93&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=wp-wal&refresh=5s&&panelId=115&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=wp-wal&refresh=5s&&panelId=110&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=wp-wal&refresh=5s&&panelId=68&kiosk&theme=light&__feature.dashboardSceneSolo"
+        }
+      ]
+    }
+  ],  
+  
+  "MPMT": [
+    {
+      "menuBar": "Home",
+      "timePicker": "1",
+      "timeRange": "10m",
+      "content": [
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.192.122:3000/d-solo/0c284af2/juno?orgId=1&from=now-{timeRange}&to=now&timezone=browser&var-namespace=juno&var-group=daq&refresh=5s&&panelId=1&kiosk&theme=light&__feature.dashboardSceneSolo"
+        },
+        {
+          "type": "htmlPage",
+          "htmlUrl": "http://10.3.171.241:9020/"
+        }
+      ]
+    }
+  ]
+
+} 
+
+
+
+
+

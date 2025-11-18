@@ -1,0 +1,2 @@
+D:/Program_Files/AAA/graduationDesign/code/alarm_app/alarm_front/android/app/.cxx/RelWithDebInfo/1e184m13/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/Program_Files/AAA/graduationDesign/code/alarm_app/alarm_front/android/app/.cxx/RelWithDebInfo/1e184m13/armeabi-v7a/CMakeFiles/rebuild_cache.dir

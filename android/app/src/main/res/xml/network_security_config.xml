@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- 允许所有明文HTTP通信 -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+    <!-- 针对特定域名的配置 -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">10.3.192.122</domain>
+        <domain includeSubdomains="true">10.3.192.12</domain>
+    </domain-config>
+</network-security-config> 

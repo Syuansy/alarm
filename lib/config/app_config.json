@@ -1,0 +1,82 @@
+{
+  "_comment": "JUNOMonitor应用配置文件",
+  "_note": "带有 * 标记的配置项需要手动修改源代码文件，修改后需要重新编译应用",
+  
+  "app": {
+    "name": "JUNOMonitor",
+    "description": "JUNOMonitor is a Jiangmen neutrino monitoring software.",
+    "version": "1.1.5",
+    "buildNumber": "10105"
+  },
+  
+  "backend": {
+    "_comment": "后端服务配置 - 直接配置完整 URL",
+    "baseUrl": "http://10.3.192.122:8001",
+    "alarmApiBase": "http://10.3.192.122:8001/api/alarm",
+    "alarmHistoryUrl": "http://10.3.192.122:8001/api/alarm/history",
+    "llmHistoryUrl": "http://10.3.192.122:8001/api/alarm/llm/history",
+    "dashboardUploadUrl": "http://10.3.192.122:8001/api/dashboard/upload",
+    "dashboardStatusUrl": "http://10.3.192.122:8001/api/dashboard/status",
+    "grafanaBaseUrl": "http://10.3.192.122:3000"
+  },
+  
+  "websocket": {
+    "_comment": "WebSocket 实时数据配置",
+    "url": "ws://10.3.192.122:8001/ws",
+    "heartbeatInterval": 30,
+    "heartbeatTimeout": 60,
+    "maxReconnectAttempts": 5
+  },
+  
+  "platform": {
+    "_comment": "平台特定配置 - 以下配置需要手动修改对应的原生配置文件",
+    
+    "web": {
+      "title": "JUNOMonitor",
+      "shortName": "JUNOMonitor",
+      "description": "JUNOMonitor is a Jiangmen neutrino monitoring software.",
+      "_manual_files": [
+        "* web/index.html - line 32: <title> 标签",
+        "* web/index.html - line 21: meta description",
+        "* web/index.html - line 26: apple-mobile-web-app-title",
+        "* web/manifest.json - line 2: name",
+        "* web/manifest.json - line 3: short_name",
+        "* lib/presentation/resources/app_texts.dart - line 2: appName"
+      ]
+    },
+    
+    "android": {
+      "appName": "JUNOMonitor",
+      "packageName": "dev.flchart.app",
+      "_manual_files": [
+        "* android/app/src/main/AndroidManifest.xml - line 2: package",
+        "* android/app/src/main/AndroidManifest.xml - line 30: android:label",
+        "* android/app/build.gradle - line 15: namespace",
+        "* android/app/build.gradle - line 30: applicationId"
+      ]
+    },
+    
+    "ios": {
+      "appName": "JUNOMonitor",
+      "bundleName": "JUNOMonitor",
+      "bundleId": "dev.flchart.app",
+      "_manual_files": [
+        "* ios/Runner/Info.plist - line 10: CFBundleDisplayName",
+        "* ios/Runner/Info.plist - line 18: CFBundleName",
+        "* ios/Runner.xcodeproj/project.pbxproj - 搜索 PRODUCT_BUNDLE_IDENTIFIER 并修改所有出现的地方"
+      ]
+    },
+    
+    "flutter": {
+      "projectName": "alarm_front",
+      "description": "JUNOMonitor is a Jiangmen neutrino monitoring software.",
+      "_manual_files": [
+        "* pubspec.yaml - line 1: name",
+        "* pubspec.yaml - line 2: description",
+        "* pubspec.yaml - line 4: version (格式: version+buildNumber)"
+      ]
+    }
+  }
+
+
+}
