@@ -1,42 +1,42 @@
-name: iOS-ipa-build
+name: iOS-ipa-build  # 工作流名称，显示在 GitHub 仓库的 Actions 标签页中
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # 触发条件：手动执行（需在 GitHub 仓库的 Actions 中手动运行）
 
 jobs:
-  build-ios:
-    name: 🎉 iOS Build
-    runs-on: macos-latest
+  build-ios:  # 任务名称
+    name: 🎉 iOS Build  # 任务显示名称
+    runs-on: macos-latest  # 运行环境：最新版 macOS（必须，因为需要 Xcode 工具链构建 iOS 应用）
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3  # GitHub 官方动作：将仓库代码检出到运行环境
 
-      - uses: subosito/flutter-action@v2
+      - uses: subosito/flutter-action@v2  # 第三方动作：快速安装指定版本的 Flutter SDK
         with:
-          channel: 'stable'
-          architecture: x64
-      - run: flutter pub get
+          channel: 'stable'  # 使用 Flutter 稳定版（可选：stable/beta/dev）
+          architecture: x64  # 指定 Flutter SDK 的架构为 x64（适配 macOS 环境）
+      - run: flutter pub get  # 运行 Flutter 命令：获取项目依赖的 pub 包
       
 
-      - run: pod repo update
-        working-directory: ios
+      - run: pod repo update  # 运行 CocoaPods 命令：更新本地 Pod 仓库
+        working-directory: ios  # 指定工作目录为项目的 ios 子目录（iOS 原生工程所在位置）
 
-      - run: flutter build ios --release --no-codesign
+      - run: flutter build ios --release --no-codesign  # 构建 iOS 发布版，跳过代码签名
 
-      - run: mkdir Payload
-        working-directory: build/ios/iphoneos
+      - run: mkdir Payload  # 创建 Payload 目录，用于存放 IPA 文件
+        working-directory: build/ios/iphoneos  # 工作目录：iOS 构建输出路径
 
-      - run: mv Runner.app/ Payload
-        working-directory: build/ios/iphoneos
+      - run: mv Runner.app/ Payload  # 将 Runner.app 移动到 Payload 文件夹
+        working-directory: build/ios/iphoneos  # 工作目录：iOS 构建输出路径
 
-      - name: Zip output
-        run: zip -qq -r -9 FlutterIpaExport.ipa Payload
-        working-directory: build/ios/iphoneos
+      - name: Zip output  # 步骤显示名称（可选）
+        run: zip -qq -r -9 FlutterIpaExport.ipa Payload  # 压缩 Payload 文件夹为 IPA
+        working-directory: build/ios/iphoneos  # 工作目录：iOS 构建输出路径
 
-      - name: Upload binaries to release
-        uses: svenstaro/upload-release-action@v2
+      - name: Upload binaries to release  # 步骤显示名称（可选）
+        uses: svenstaro/upload-release-action@v2  # 第三方动作：上传文件到 GitHub Release
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: build/ios/iphoneos/FlutterIpaExport.ipa
-          tag: v1.0
-          overwrite: true
-          body: "This is first release"
+          repo_token: ${{ secrets.GITHUB_TOKEN }}  # GitHub 认证令牌（自动获取，无需手动配置）
+          file: build/ios/iphoneos/FlutterIpaExport.ipa  # 待上传的 IPA 文件路径
+          tag: v1.0  # 关联的 GitHub Release 标签（若不存在会自动创建）
+          overwrite: true  # 覆盖同标签下的同名文件（允许重复执行时更新）
+          body: "This is first release"  # Release 的描述信息

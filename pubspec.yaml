@@ -44,6 +44,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.14.1
 
 flutter:
   uses-material-design: true
@@ -57,3 +58,9 @@ flutter:
     - assets/fonts/
     - assets/data/
     - lib/config/
+
+# 应用图标配置 (已生成，保留此配置以便将来更新图标)
+# 使用方法: flutter pub run flutter_launcher_icons
+flutter_launcher_icons:
+  ios: true
+  image_path: "ios/Runner/Assets.xcassets/AppIcon.appiconset/app_logo_1024.png"
