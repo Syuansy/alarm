@@ -1,8 +1,5 @@
-# 指定 CocoaPods 源，使用 GitHub 镜像避免 CDN 500 错误
-source 'https://github.com/CocoaPods/Specs.git'
-
 # Uncomment this line to define a global platform for your project
-platform :ios, '13.0'
+# platform :ios, '12.0'
 
 # CocoaPods analytics sends network stats synchronously affecting flutter build latency.
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
