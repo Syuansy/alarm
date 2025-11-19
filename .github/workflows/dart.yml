@@ -14,7 +14,11 @@ jobs:
         with:
           channel: 'stable'  # 使用 Flutter 稳定版（可选：stable/beta/dev）
           architecture: x64  # 指定 Flutter SDK 的架构为 x64（适配 macOS 环境）
+      
       - run: flutter pub get  # 运行 Flutter 命令：获取项目依赖的 pub 包
+
+      - name: Generate app icons  # 自动生成应用图标（确保 CI 环境有正确的图标文件）
+        run: flutter pub run flutter_launcher_icons
 
       - run: pod repo update  # 运行 CocoaPods 命令：更新本地 Pod 仓库
         working-directory: ios  # 指定工作目录为项目的 ios 子目录（iOS 原生工程所在位置）
